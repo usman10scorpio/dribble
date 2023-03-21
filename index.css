@@ -1,0 +1,10 @@
+html {
+  font-size: 62.5%;
+  /* default font size is 10px -> 10/16 = 0.625 * 100% font size of browser*/
+}
+
+#slider {
+  height: 45rem;
+}
+
+/*# sourceMappingURL=index.css.map */
