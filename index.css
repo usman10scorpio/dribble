@@ -33,10 +33,18 @@ body * {
 }
 #slider #header input {
   width: 21rem;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 5rem;
   border-radius: 1rem;
   border: 0.1rem solid #9ea0a6;
   background-color: transparent;
+  background: url(./images/search.png) no-repeat scroll 1rem 0.75rem;
+  z-index: 1;
+  background-size: 2.5rem;
+}
+#slider #header input :focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 #slider .slider {
   display: none;
@@ -153,6 +161,10 @@ body * {
   text-align: center;
 }
 
+#cprogress {
+  text-align: center;
+  padding: 1rem 0rem;
+}
 #cprogress div {
   border-top: 0.3rem solid #2b2d40;
   display: inline-block;
@@ -171,6 +183,114 @@ body * {
   width: 0.3rem;
   margin-left: 0.2rem;
   border-radius: 0.2rem;
+}
+
+.hproducts {
+  display: flex;
+  padding: 2rem 2.2rem;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.hproducts__heading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #161828;
+}
+.hproducts__subheading {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #4db39a;
+}
+
+#products {
+  display: flex;
+  padding: 0rem 2.2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 8rem;
+}
+#products .product {
+  flex: 0 1 18rem;
+}
+#products .product__image {
+  width: 18rem;
+  height: 12rem;
+  padding-bottom: 1.5rem;
+}
+#products .product__type {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  color: #b3b3b8;
+  font-weight: 500;
+}
+#products .product__name {
+  font-size: 1.4rem;
+  padding-bottom: 2.55rem;
+  color: #161828;
+  font-weight: 600;
+}
+#products .product__ratingprice {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  color: #b3b3b8;
+  font-weight: 500;
+}
+#products .product__rating {
+  font-size: 1.4rem;
+  display: flex;
+}
+#products .product__star {
+  font-size: 1.4rem;
+  color: #b3b3b8;
+  font-weight: 500;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+#products .product__price {
+  font-size: 1.6rem;
+  color: #3f9f89;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 2rem 0rem;
+}
+.footer__icon {
+  width: 4rem;
+  height: 4rem;
+}
+.footer__name {
+  font-size: 1.4rem;
+  color: #a5aab5;
+}
+
+@media only screen and (max-width: 320px) {
+  #slider #header input {
+    width: 17rem;
+  }
+  #products {
+    padding: unset;
+    flex-direction: column;
+  }
+  #products .product {
+    width: 18rem;
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 375px) {
+  #products {
+    padding: 0rem 0.2rem 9rem 0.2rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

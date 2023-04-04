@@ -34,10 +34,19 @@ body {
 
         input {
             width: 21rem;
-            padding: 1rem;
+            padding: 1rem 1rem 1rem 5rem;
             border-radius: 1rem;
             border: 0.1rem solid #9ea0a6;
             background-color: transparent;
+            background: url(./images/search.png) no-repeat scroll 1rem 0.75rem;
+            z-index: 1;
+            background-size: 2.5rem;
+
+            :focus {
+                border-color: inherit;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
 
         }
     }
@@ -183,6 +192,9 @@ body {
 
 #cprogress {
 
+    text-align: center;
+    padding: 1rem 0rem;
+
     div {
         border-top: .3rem solid #2b2d40;
         display: inline-block;
@@ -205,3 +217,145 @@ body {
         border-radius: 0.2rem;
     }
 }
+
+.hproducts {
+    display: flex;
+    padding: 2rem 2.2rem;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: white;
+
+    &__heading {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #161828;
+    }
+
+    &__subheading {
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #4db39a;
+    }
+}
+
+#products {
+
+    display: flex;
+    padding: 0rem 2.2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 8rem;
+
+    .product {
+        flex: 0 1 18rem;
+
+        &__image {
+            width: 18rem;
+            height: 12rem;
+            padding-bottom: 1.5rem;
+        }
+
+        &__type {
+            font-size: 1.2rem;
+            padding-bottom: 0.5rem;
+            color: #b3b3b8;
+            font-weight: 500;
+        }
+
+        &__name {
+            font-size: 1.4rem;
+            padding-bottom: 2.55rem;
+            color: #161828;
+            font-weight: 600;
+        }
+
+        &__ratingprice {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 4rem;
+            color: #b3b3b8;
+            font-weight: 500;
+        }
+
+        &__rating {
+            font-size: 1.4rem;
+            display: flex;
+        }
+
+        &__star {
+            font-size: 1.4rem;
+            color: #b3b3b8;
+            font-weight: 500;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        &__price {
+            font-size: 1.6rem;
+            color: #3f9f89;
+            font-weight: 600;
+        }
+    }
+    
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    padding: 2rem 0rem;
+
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &__name {
+        font-size: 1.4rem;
+        color: #a5aab5;
+    }
+
+}
+
+
+// media queries
+
+@media only screen and (max-width: 320px) {
+
+    #slider {
+
+        #header {
+
+            input {
+                width: 17rem;
+            }
+        }
+    }
+
+    #products {
+      padding: unset;
+      flex-direction: column;
+
+      .product {
+        width: 18rem;
+        align-self: center;
+      }
+    }
+  }
+
+@media only screen and (max-width: 375px) {
+    #products {
+      padding: 0rem 0.2rem 9rem 0.2rem
+    }
+  }
+
+ 
+
+
+
