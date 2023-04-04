@@ -18,20 +18,19 @@ body * {
 #slider {
   position: relative;
 }
-#slider #header {
-  position: absolute;
+#slider .header {
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
-  background-color: white;
   display: flex;
   padding-left: 2.2rem;
   padding-top: 4.2rem;
-  padding-bottom: 1.6rem;
+  padding-bottom: 2rem;
   background-color: inherit;
   box-sizing: border-box;
 }
-#slider #header input {
+#slider .header input {
   width: 21rem;
   padding: 1rem 1rem 1rem 5rem;
   border-radius: 1rem;
@@ -41,7 +40,7 @@ body * {
   z-index: 1;
   background-size: 2.5rem;
 }
-#slider #header input :focus {
+#slider .header input :focus {
   border-color: inherit;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -190,8 +189,9 @@ body * {
   padding: 2rem 2.2rem;
   justify-content: space-between;
   position: sticky;
-  top: 0;
-  background-color: white;
+  top: 9.4rem;
+  z-index: 1;
+  background-color: #f4f5f8;
 }
 .hproducts__heading {
   font-size: 1.3rem;
@@ -206,10 +206,11 @@ body * {
 
 #products {
   display: flex;
-  padding: 0rem 2.2rem;
+  padding: 0rem 1.2rem;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-bottom: 8rem;
+  background-color: #f4f5f8;
 }
 #products .product {
   flex: 0 1 18rem;
@@ -274,8 +275,8 @@ body * {
   color: #a5aab5;
 }
 
-@media only screen and (max-width: 320px) {
-  #slider #header input {
+@media only screen and (max-width: 363px) {
+  #slider .header input {
     width: 17rem;
   }
   #products {
