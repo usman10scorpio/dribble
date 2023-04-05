@@ -185,6 +185,7 @@ body {
 
         &__name {
             text-align: center;
+            color: #bebebe;
         }
     }
 }
@@ -322,6 +323,11 @@ body {
         color: #a5aab5;
     }
 
+}
+
+.href {
+    color: unset;
+    text-decoration: unset;
 }
 
 
